@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "694108056283",
+    "project_id": "ig-clone-timothy",
+    "storage_bucket": "ig-clone-timothy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:694108056283:android:ba5b7a24e558a921c77afe",
+        "android_client_info": {
+          "package_name": "com.qbase.instagram_app_clone"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCejs3fISyreHYf4i1ctrRcQRgCN_jhHZg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

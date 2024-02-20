@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="facebook_app_id">1078277450076572</string>
+    <string name="fb_login_protocol_scheme">fb1078277450076572</string>
+    <string name="facebook_client_token">dfe3fcebacf35d6b4861cd9094e7d72d</string>
+    <string name="app_name">Qbase share</string>
+</resources>
