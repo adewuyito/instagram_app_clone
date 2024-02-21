@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:instagram_app_clone/state/auth/backends/authenticator.dart';
 import 'package:instagram_app_clone/state/auth/riverpod/porviders/auth_state_provider.dart';
+import 'package:instagram_app_clone/views/components/loading/loading_screen.dart';
 import 'package:riverpod/riverpod.dart';
 // import 'package:hooks_riverpod/hooks_riverpod.dart';
 
