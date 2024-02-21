@@ -1,8 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:instagram_app_clone/views/components/constants/strings.dart';
-import 'package:instagram_app_clone/views/components/loading/loading_screen_controller.dart';
+import 'package:instagram_app_clone/utils/constants/strings.dart';
+import 'package:instagram_app_clone/common/components/loading/loading_screen_controller.dart';
 
 class LoadingScreen {
   // Singleton definition for LoadingScreen

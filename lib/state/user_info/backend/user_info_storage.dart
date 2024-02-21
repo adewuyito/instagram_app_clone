@@ -1,9 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart';
-import 'package:instagram_app_clone/state/constants/firebas_collection_names.dart';
-import 'package:instagram_app_clone/state/constants/firebase_field_name.dart';
 import 'package:instagram_app_clone/state/posts/typedefs/user_id.dart';
 import 'package:instagram_app_clone/state/user_info/models/user_info_payload.dart';
+import 'package:instagram_app_clone/utils/constants/firebas_collection_names.dart';
+import 'package:instagram_app_clone/utils/constants/firebase_field_name.dart';
 
 @immutable
 class UserInfoStorage {
