@@ -2,6 +2,12 @@ import 'package:flutter/foundation.dart' show immutable;
 import 'package:instagram_app_clone/state/auth/models/auth_result.dart';
 import 'package:instagram_app_clone/state/posts/typedefs/user_id.dart';
 
+
+/*
+  The state notifier created from the state object [AuthState] class
+  would act as the abstraction layer
+  Riverpod would use to carry out our 
+*/
 @immutable
 class AuthState {
   final AuthResult? result;

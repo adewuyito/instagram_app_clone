@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:instagram_app_clone/app.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:instagram_app_clone/app.dart';
+import 'package:instagram_app_clone/state/auth/riverpod/porviders/is_logged_in_provider.dart';
 import 'firebase_options.dart';
-
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(const MyApp());
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -19,13 +20,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.dark,
       darkTheme: ThemeData.dark(),
       title: 'Flutter Demo',
       theme: ThemeData(
         useMaterial3: true,
       ),
-      home: const AppBuild(),
+      home: Consumer(
+        builder: (context, ref, child) {
+          final isLogged = ref.watch(isLoggedInProvider);
+          return isLogged ? const MainView() : const LoginView();
+        },
+      ),
     );
   }
 }
