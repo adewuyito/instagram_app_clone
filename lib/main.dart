@@ -3,6 +3,8 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:instagram_app_clone/app.dart';
 import 'package:instagram_app_clone/state/auth/riverpod/porviders/is_logged_in_provider.dart';
+import 'package:instagram_app_clone/state/providers/is_loading_provider.dart';
+import 'package:instagram_app_clone/views/components/loading/loading_screen.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -29,6 +31,13 @@ class MyApp extends StatelessWidget {
       ),
       home: Consumer(
         builder: (context, ref, child) {
+          // Display Loading screen
+          ref.listen(
+            isLoadingProvider,
+            (_, isLoading) {
+              isLoading ? LoadingScreen.instance().show(context: context) : LoadingScreen.instance().hide();
+            },
+          );
           final isLogged = ref.watch(isLoggedInProvider);
           return isLogged ? const MainView() : const LoginView();
         },
