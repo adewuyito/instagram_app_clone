@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:instagram_app_clone/app.dart';
-import 'package:instagram_app_clone/state/auth/riverpod/porviders/is_logged_in_provider.dart';
-import 'package:instagram_app_clone/state/providers/is_loading_provider.dart';
+import 'package:instagram_app_clone/features/main_view/main_view.dart';
+import 'package:instagram_app_clone/features/auth/riverpod/porviders/is_logged_in_provider.dart';
+import 'package:instagram_app_clone/common/providers/is_loading_provider.dart';
 import 'package:instagram_app_clone/common/components/loading/loading_screen.dart';
-import 'package:instagram_app_clone/views/login_view.dart';
+import 'package:instagram_app_clone/features/auth/views/login_view.dart';
 import 'firebase_options.dart';
 
 void main() async {
