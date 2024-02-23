@@ -1,5 +1,4 @@
 // import 'dart:developer' as devtools show log;
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -36,9 +35,10 @@ class _MainViewState extends ConsumerState<MainView> {
             IconButton(
               onPressed: () async {
                 // Pick A Video
-                final videoFile = await ImagePickerHelper.pickVideoFromGallary();
+                final videoFile =
+                    await ImagePickerHelper.pickVideoFromGallary();
                 if (videoFile == null) return;
-                ref.invalidate(postSettingprovider);
+                ref .refresh(postSettingprovider);
 
                 if (!mounted) {
                   return;
@@ -58,7 +58,8 @@ class _MainViewState extends ConsumerState<MainView> {
             IconButton(
               onPressed: () async {
                 // Pick A Image
-                final imageFile = await ImagePickerHelper.pickImageFromGallary();
+                final imageFile =
+                    await ImagePickerHelper.pickImageFromGallary();
                 if (imageFile == null) return;
                 ref.invalidate(postSettingprovider);
 
@@ -79,7 +80,9 @@ class _MainViewState extends ConsumerState<MainView> {
             ),
             IconButton(
               onPressed: () async {
-                final shouldLogOut = await LogOutDialog().present(context).then((value) => value ?? false);
+                final shouldLogOut = await LogOutDialog()
+                    .present(context)
+                    .then((value) => value ?? false);
                 if (shouldLogOut) {
                   ref.read(authStateProvider.notifier).logOut();
                 }
