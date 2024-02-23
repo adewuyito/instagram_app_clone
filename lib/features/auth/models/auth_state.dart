@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart' show immutable;
 import 'package:instagram_app_clone/features/auth/models/auth_result.dart';
-import 'package:instagram_app_clone/features/posts/typedefs/user_id.dart';
+import 'package:instagram_app_clone/common/typedefs/user_id_typedef.dart';
 
 
 /*

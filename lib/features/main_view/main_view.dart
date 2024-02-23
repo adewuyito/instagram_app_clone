@@ -6,8 +6,12 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:instagram_app_clone/common/components/dialog/model/alert_dialog.dart';
 import 'package:instagram_app_clone/common/components/dialog/view/log_out_dialog.dart';
 import 'package:instagram_app_clone/features/auth/riverpod/porviders/auth_state_provider.dart';
+import 'package:instagram_app_clone/features/image_upload/models/file_types_enum.dart';
+import 'package:instagram_app_clone/features/image_upload/views/create_new_post_view.dart';
+import 'package:instagram_app_clone/features/posts/provider/post_settings_provider.dart';
 import 'package:instagram_app_clone/features/posts/views/tabs/user_posts/user_post_view.dart';
 import 'package:instagram_app_clone/utils/constants/strings.dart';
+import 'package:instagram_app_clone/utils/helpers/image_picker.dart';
 
 // extension Log on Object {
 //   void log() => devtools.log(toString());
@@ -30,11 +34,47 @@ class _MainViewState extends ConsumerState<MainView> {
           title: const Text(Strings.appName),
           actions: <Widget>[
             IconButton(
-              onPressed: () async {},
+              onPressed: () async {
+                // Pick A Video
+                final videoFile = await ImagePickerHelper.pickVideoFromGallary();
+                if (videoFile == null) return;
+                ref.invalidate(postSettingprovider);
+
+                if (!mounted) {
+                  return;
+                }
+
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => CreateNewPostView(
+                      file: videoFile,
+                      fileType: FileType.video,
+                    ),
+                  ),
+                );
+              },
               icon: const FaIcon(FontAwesomeIcons.film),
             ),
             IconButton(
-              onPressed: () async {},
+              onPressed: () async {
+                // Pick A Image
+                final imageFile = await ImagePickerHelper.pickImageFromGallary();
+                if (imageFile == null) return;
+                ref.invalidate(postSettingprovider);
+
+                if (!mounted) {
+                  return;
+                }
+
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => CreateNewPostView(
+                      file: imageFile,
+                      fileType: FileType.image,
+                    ),
+                  ),
+                );
+              },
               icon: const Icon(Icons.add_photo_alternate_outlined),
             ),
             IconButton(
@@ -57,9 +97,9 @@ class _MainViewState extends ConsumerState<MainView> {
         ),
         body: const TabBarView(
           children: <Widget>[
-           UserPostView(),
-           UserPostView(),
-           UserPostView(),
+            UserPostView(),
+            UserPostView(),
+            UserPostView(),
           ],
         ),
       ),
