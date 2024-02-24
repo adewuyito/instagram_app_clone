@@ -19,35 +19,30 @@ class SearchViewTab extends HookConsumerWidget {
 
       return () {};
     }, [controller]);
-    return SingleChildScrollView(
-      child: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: TextField(
-              controller: controller,
-              textInputAction: TextInputAction.search,
-              decoration: InputDecoration(
-                labelText: Strings.enterYourSearchTermHere,
-                suffixIcon: IconButton(
-                  icon: const Icon(
-                    Icons.clear,
-                  ),
-                  onPressed: () {
-                    controller.clear();
-                    dismissKeyboard;
-                  },
+    return CustomScrollView(
+      slivers: [
+        SliverToBoxAdapter(
+          child: TextField(
+            controller: controller,
+            textInputAction: TextInputAction.search,
+            decoration: InputDecoration(
+              labelText: Strings.enterYourSearchTermHere,
+              suffixIcon: IconButton(
+                icon: const Icon(
+                  Icons.clear,
                 ),
+                onPressed: () {
+                  controller.clear();
+                  dismissKeyboard;
+                },
               ),
             ),
           ),
-          Expanded(
-            child: SearchGridView(
-              searchTearm: searchTerm.value,
-            ),
-          ),
-        ],
-      ),
+        ),
+        SearchGridView(
+          searchTearm: searchTerm.value,
+        ),
+      ],
     );
   }
 }
