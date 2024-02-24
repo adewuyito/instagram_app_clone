@@ -4,8 +4,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:instagram_app_clone/common/typedefs/user_id_typedef.dart';
 import 'package:instagram_app_clone/state/user_info/models/user_info_model.dart';
-import 'package:instagram_app_clone/utils/constants/firebas_collection_names_constants.dart';
-import 'package:instagram_app_clone/utils/constants/firebase_field_name_constants.dart';
+import 'package:instagram_app_clone/features/posts/views/utils/constants/firebas_collection_names_constants.dart';
+import 'package:instagram_app_clone/features/posts/views/utils/constants/firebase_field_name_constants.dart';
 
 // Contiually gives us info so it does not need a notifier
 final userInfoModelProvider = StreamProvider.autoDispose.family<UserInfoModel, UserId>((ref, UserId userId) {

@@ -4,7 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:image/image.dart' as img;
 import 'package:instagram_app_clone/features/image_upload/extentions/get_collection_name_from_types.dart';
 import 'package:instagram_app_clone/features/posts/models/post_payload.dart';
-import 'package:instagram_app_clone/utils/constants/firebas_collection_names_constants.dart';
+import 'package:instagram_app_clone/features/posts/views/utils/constants/firebas_collection_names_constants.dart';
 import 'package:uuid/uuid.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:firebase_storage/firebase_storage.dart';
@@ -14,7 +14,7 @@ import 'package:instagram_app_clone/features/image_upload/exceptions/image_excep
 import 'package:instagram_app_clone/features/image_upload/extentions/get_image_data_aspect_ratio.dart';
 import 'package:instagram_app_clone/features/image_upload/models/file_types_enum.dart';
 import 'package:instagram_app_clone/features/image_upload/models/post_settings_enum.dart';
-import 'package:instagram_app_clone/utils/constants/file_upload_constants.dart';
+import 'package:instagram_app_clone/features/posts/views/utils/constants/file_upload_constants.dart';
 import 'package:video_thumbnail/video_thumbnail.dart';
 
 class ImageUploadNotifier extends StateNotifier<IsLoading> {

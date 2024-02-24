@@ -9,7 +9,7 @@ import 'package:instagram_app_clone/features/image_upload/models/post_settings_e
 import 'package:instagram_app_clone/features/image_upload/models/thumbnail_request.dart';
 import 'package:instagram_app_clone/features/image_upload/provider/image_upload_provider.dart';
 import 'package:instagram_app_clone/features/posts/provider/post_settings_provider.dart';
-import 'package:instagram_app_clone/utils/constants/strings.dart';
+import 'package:instagram_app_clone/features/posts/views/utils/constants/strings.dart';
 
 class CreateNewPostView extends StatefulHookConsumerWidget {
   final File file;

@@ -3,7 +3,7 @@ import 'package:flutter/foundation.dart' show immutable;
 import 'package:instagram_app_clone/common/typedefs/comment_identifier_typedef.dart';
 import 'package:instagram_app_clone/common/typedefs/post_id_typedef.dart';
 import 'package:instagram_app_clone/common/typedefs/user_id_typedef.dart';
-import 'package:instagram_app_clone/utils/constants/firebase_field_name_constants.dart';
+import 'package:instagram_app_clone/features/posts/views/utils/constants/firebase_field_name_constants.dart';
 
 @immutable
 class Comment {

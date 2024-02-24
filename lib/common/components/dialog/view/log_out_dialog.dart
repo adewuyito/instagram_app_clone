@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_app_clone/common/components/dialog/model/alert_dialog.dart';
-import 'package:instagram_app_clone/utils/constants/strings.dart';
+import 'package:instagram_app_clone/features/posts/views/utils/constants/strings.dart';
 
 @immutable
 class LogOutDialog extends AlertDialogModel<bool> {

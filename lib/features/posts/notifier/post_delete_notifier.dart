@@ -5,8 +5,8 @@ import 'package:instagram_app_clone/common/typedefs/is_loading_typedef.dart';
 import 'package:instagram_app_clone/common/typedefs/post_id_typedef.dart';
 import 'package:instagram_app_clone/features/image_upload/extentions/get_collection_name_from_types.dart';
 import 'package:instagram_app_clone/features/posts/models/post.dart';
-import 'package:instagram_app_clone/utils/constants/firebas_collection_names_constants.dart';
-import 'package:instagram_app_clone/utils/constants/firebase_field_name_constants.dart';
+import 'package:instagram_app_clone/features/posts/views/utils/constants/firebas_collection_names_constants.dart';
+import 'package:instagram_app_clone/features/posts/views/utils/constants/firebase_field_name_constants.dart';
 
 class DeletePostStateNotifier extends StateNotifier<IsLoading> {
   DeletePostStateNotifier() : super(false);

@@ -8,7 +8,7 @@ import 'package:instagram_app_clone/features/comments/models/comment_model.dart'
 import 'package:instagram_app_clone/features/comments/providers/comment_delete_provider.dart';
 import 'package:instagram_app_clone/features/image_upload/views/create_new_post_view.dart';
 import 'package:instagram_app_clone/state/user_info/providers/user_info_model_provider.dart';
-import 'package:instagram_app_clone/utils/constants/strings.dart';
+import 'package:instagram_app_clone/features/posts/views/utils/constants/strings.dart';
 
 class CommentTile extends ConsumerWidget {
   final Comment comment;

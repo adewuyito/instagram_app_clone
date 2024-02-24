@@ -11,8 +11,8 @@ import 'package:instagram_app_clone/features/comments/providers/comment_create_p
 import 'package:instagram_app_clone/features/comments/providers/comment_post_provider.dart';
 import 'package:instagram_app_clone/features/comments/views/widget/comment_tile.dart';
 import 'package:instagram_app_clone/features/image_upload/views/create_new_post_view.dart';
-import 'package:instagram_app_clone/utils/constants/strings.dart';
-import 'package:instagram_app_clone/utils/extentions/dismiss_keyboard.dart';
+import 'package:instagram_app_clone/features/posts/views/utils/constants/strings.dart';
+import 'package:instagram_app_clone/features/posts/views/utils/extentions/dismiss_keyboard.dart';
 
 class PostCommentView extends HookConsumerWidget {
   final PostId postId;

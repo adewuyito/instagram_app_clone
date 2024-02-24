@@ -19,8 +19,8 @@ import 'package:instagram_app_clone/features/posts/models/post.dart';
 import 'package:instagram_app_clone/features/posts/models/post_comments_request.dart';
 import 'package:instagram_app_clone/features/posts/provider/can_delete_post_provider.dart';
 import 'package:instagram_app_clone/features/posts/provider/post_with_comments_provider.dart';
-import 'package:instagram_app_clone/utils/constants/strings.dart';
-import 'package:instagram_app_clone/utils/enums/date_sorting.dart';
+import 'package:instagram_app_clone/features/posts/views/utils/constants/strings.dart';
+import 'package:instagram_app_clone/features/posts/views/utils/enums/date_sorting.dart';
 
 class PostDetailView extends ConsumerStatefulWidget {
   // TODO: FIX TO HAVING THE POST ID

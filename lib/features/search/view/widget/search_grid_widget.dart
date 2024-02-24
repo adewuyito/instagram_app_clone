@@ -6,7 +6,7 @@ import 'package:instagram_app_clone/common/components/animations/widgets/error_a
 import 'package:instagram_app_clone/common/typedefs/search_term.dart';
 import 'package:instagram_app_clone/features/posts/views/widgets/post_sliver_grid_view.dart';
 import 'package:instagram_app_clone/features/search/provider/post_by_serach_term_provider.dart';
-import 'package:instagram_app_clone/utils/constants/strings.dart';
+import 'package:instagram_app_clone/features/posts/views/utils/constants/strings.dart';
 
 class SearchGridView extends ConsumerWidget {
   final SearchTerm searchTearm;

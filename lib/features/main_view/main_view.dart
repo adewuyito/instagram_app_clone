@@ -8,10 +8,11 @@ import 'package:instagram_app_clone/features/auth/riverpod/porviders/auth_state_
 import 'package:instagram_app_clone/features/image_upload/models/file_types_enum.dart';
 import 'package:instagram_app_clone/features/image_upload/views/create_new_post_view.dart';
 import 'package:instagram_app_clone/features/posts/provider/post_settings_provider.dart';
+import 'package:instagram_app_clone/features/posts/views/user_posts/all_post_view.dart';
 import 'package:instagram_app_clone/features/posts/views/user_posts/user_post_view.dart';
 import 'package:instagram_app_clone/features/search/view/search_view.dart';
-import 'package:instagram_app_clone/utils/constants/strings.dart';
-import 'package:instagram_app_clone/utils/helpers/image_picker.dart';
+import 'package:instagram_app_clone/features/posts/views/utils/constants/strings.dart';
+import 'package:instagram_app_clone/features/posts/views/utils/helpers/image_picker.dart';
 
 // extension Log on Object {
 //   void log() => devtools.log(toString());
@@ -40,7 +41,7 @@ class _MainViewState extends ConsumerState<MainView> {
                     await ImagePickerHelper.pickVideoFromGallary();
                 if (videoFile == null) return;
                 // ignore: unused_result
-                ref .refresh(postSettingprovider);
+                ref.refresh(postSettingprovider);
 
                 if (!mounted) {
                   return;
@@ -103,8 +104,8 @@ class _MainViewState extends ConsumerState<MainView> {
         body: const TabBarView(
           children: <Widget>[
             UserPostView(),
-            SearchViewTab(),
-            UserPostView(),
+            SearchView(),
+            AllPostView(),
           ],
         ),
       ),

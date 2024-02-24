@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:instagram_app_clone/utils/constants/strings.dart';
+import 'package:instagram_app_clone/features/posts/views/utils/constants/strings.dart';
 import 'package:instagram_app_clone/common/components/loading/loading_screen_controller.dart';
 
 class LoadingScreen {

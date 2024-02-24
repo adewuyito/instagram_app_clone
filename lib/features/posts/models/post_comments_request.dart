@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart' show immutable;
 import 'package:instagram_app_clone/common/typedefs/post_id_typedef.dart';
-import 'package:instagram_app_clone/utils/enums/date_sorting.dart';
+import 'package:instagram_app_clone/features/posts/views/utils/enums/date_sorting.dart';
 
 @immutable
 class RequestForPostAndComments {

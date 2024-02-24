@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:instagram_app_clone/common/typedefs/comment_identifier_typedef.dart';
 import 'package:instagram_app_clone/common/typedefs/is_loading_typedef.dart';
-import 'package:instagram_app_clone/utils/constants/firebas_collection_names_constants.dart';
+import 'package:instagram_app_clone/features/posts/views/utils/constants/firebas_collection_names_constants.dart';
 
 class DeleteCommentStateNotifier extends StateNotifier<IsLoading> {
   DeleteCommentStateNotifier() : super(false);

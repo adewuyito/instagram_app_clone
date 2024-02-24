@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_app_clone/common/components/rich_text/base_text.dart';
 import 'package:instagram_app_clone/common/components/rich_text/rich_text_widget.dart';
-import 'package:instagram_app_clone/utils/constants/strings.dart';
+import 'package:instagram_app_clone/features/posts/views/utils/constants/strings.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class LoginViewSignupLinks extends StatelessWidget {

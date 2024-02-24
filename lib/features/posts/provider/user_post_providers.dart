@@ -5,8 +5,8 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:instagram_app_clone/features/auth/riverpod/porviders/user_id_provider.dart';
 import 'package:instagram_app_clone/features/posts/models/post.dart';
 import 'package:instagram_app_clone/features/posts/models/post_keys.dart';
-import 'package:instagram_app_clone/utils/constants/firebas_collection_names_constants.dart';
-import 'package:instagram_app_clone/utils/constants/firebase_field_name_constants.dart';
+import 'package:instagram_app_clone/features/posts/views/utils/constants/firebas_collection_names_constants.dart';
+import 'package:instagram_app_clone/features/posts/views/utils/constants/firebase_field_name_constants.dart';
 
 // This provider is used to get the posts of the current user
 final userPostsProvider = StreamProvider.autoDispose<Iterable<Post>>((ref) {

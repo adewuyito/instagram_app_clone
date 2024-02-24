@@ -3,7 +3,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:instagram_app_clone/common/components/animations/widgets/small_error_animation_widget.dart';
 import 'package:instagram_app_clone/common/typedefs/post_id_typedef.dart';
 import 'package:instagram_app_clone/features/likes/provider/post_likes_count_provider.dart';
-import 'package:instagram_app_clone/utils/constants/strings.dart';
+import 'package:instagram_app_clone/features/posts/views/utils/constants/strings.dart';
 
 class LikesCountViews extends ConsumerWidget {
   final PostId postId;

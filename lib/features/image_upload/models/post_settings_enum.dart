@@ -1,4 +1,4 @@
-import 'package:instagram_app_clone/utils/constants/post_constants.dart';
+import 'package:instagram_app_clone/features/posts/views/utils/constants/post_constants.dart';
 
 enum PostSetting  {
   allowLikes(

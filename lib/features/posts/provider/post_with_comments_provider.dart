@@ -7,8 +7,8 @@ import 'package:instagram_app_clone/features/comments/models/comment_model.dart'
 import 'package:instagram_app_clone/features/posts/models/post.dart';
 import 'package:instagram_app_clone/features/posts/models/post_comments_request.dart';
 import 'package:instagram_app_clone/features/posts/models/post_with_comments_model.dart';
-import 'package:instagram_app_clone/utils/constants/firebas_collection_names_constants.dart';
-import 'package:instagram_app_clone/utils/constants/firebase_field_name_constants.dart';
+import 'package:instagram_app_clone/features/posts/views/utils/constants/firebas_collection_names_constants.dart';
+import 'package:instagram_app_clone/features/posts/views/utils/constants/firebase_field_name_constants.dart';
 
 final postWithCommentProvider = StreamProvider.family
     .autoDispose<PostWithComment, RequestForPostAndComments>(
