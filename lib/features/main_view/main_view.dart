@@ -9,6 +9,7 @@ import 'package:instagram_app_clone/features/image_upload/models/file_types_enum
 import 'package:instagram_app_clone/features/image_upload/views/create_new_post_view.dart';
 import 'package:instagram_app_clone/features/posts/provider/post_settings_provider.dart';
 import 'package:instagram_app_clone/features/posts/views/user_posts/user_post_view.dart';
+import 'package:instagram_app_clone/features/search/view/search_view.dart';
 import 'package:instagram_app_clone/utils/constants/strings.dart';
 import 'package:instagram_app_clone/utils/helpers/image_picker.dart';
 
@@ -102,7 +103,7 @@ class _MainViewState extends ConsumerState<MainView> {
         body: const TabBarView(
           children: <Widget>[
             UserPostView(),
-            UserPostView(),
+            SearchViewTab(),
             UserPostView(),
           ],
         ),
