@@ -8,7 +8,7 @@ import 'package:instagram_app_clone/features/auth/riverpod/porviders/auth_state_
 import 'package:instagram_app_clone/features/image_upload/models/file_types_enum.dart';
 import 'package:instagram_app_clone/features/image_upload/views/create_new_post_view.dart';
 import 'package:instagram_app_clone/features/posts/provider/post_settings_provider.dart';
-import 'package:instagram_app_clone/features/posts/views/tabs/user_posts/user_post_view.dart';
+import 'package:instagram_app_clone/features/posts/views/user_posts/user_post_view.dart';
 import 'package:instagram_app_clone/utils/constants/strings.dart';
 import 'package:instagram_app_clone/utils/helpers/image_picker.dart';
 
@@ -38,6 +38,7 @@ class _MainViewState extends ConsumerState<MainView> {
                 final videoFile =
                     await ImagePickerHelper.pickVideoFromGallary();
                 if (videoFile == null) return;
+                // ignore: unused_result
                 ref .refresh(postSettingprovider);
 
                 if (!mounted) {

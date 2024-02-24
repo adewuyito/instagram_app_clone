@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_app_clone/features/posts/models/post.dart';
+import 'package:instagram_app_clone/features/posts/views/post_details/post__details_view.dart';
 import 'package:instagram_app_clone/features/posts/views/widgets/post_thumbnail_widget.dart';
 
 class PostGridViewWidget extends StatelessWidget {
@@ -14,9 +15,16 @@ class PostGridViewWidget extends StatelessWidget {
       itemCount: posts.length,
       itemBuilder: (context, index) {
         final post = posts.elementAt(index);
-        return PostThumbnailWidget(post: post, onTap: () {
-          // TODO: Navigate to post detail
-        });
+        return PostThumbnailWidget(
+          post: post,
+          onTap: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) => PostDetailView(post: post),
+              ),
+            );
+          },
+        );
       },
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 3,

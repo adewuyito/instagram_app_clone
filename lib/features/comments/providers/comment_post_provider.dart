@@ -4,7 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:instagram_app_clone/features/comments/extentions/comment_sorting_by_request.dart';
 import 'package:instagram_app_clone/features/comments/models/comment_model.dart';
-import 'package:instagram_app_clone/features/comments/models/post_comments_request.dart';
+import 'package:instagram_app_clone/features/posts/models/post_comments_request.dart';
 import 'package:instagram_app_clone/utils/constants/firebas_collection_names_constants.dart';
 import 'package:instagram_app_clone/utils/constants/firebase_field_name_constants.dart';
 

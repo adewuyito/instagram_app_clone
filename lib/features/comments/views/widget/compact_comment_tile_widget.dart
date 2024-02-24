@@ -2,29 +2,30 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:instagram_app_clone/common/components/animations/widgets/small_error_animation_widget.dart';
 import 'package:instagram_app_clone/common/components/rich_text/rich_two_part_text.dart';
-import 'package:instagram_app_clone/features/posts/models/post.dart';
+import 'package:instagram_app_clone/features/comments/models/comment_model.dart';
 import 'package:instagram_app_clone/state/user_info/providers/user_info_model_provider.dart';
 
-class PostDisplayNameAndMessage extends ConsumerWidget {
-  final Post post;
-  const PostDisplayNameAndMessage({
+class CompactCommentTile extends ConsumerWidget {
+  final Comment comment;
+  const CompactCommentTile({
     super.key,
-    required this.post,
+    required this.comment,
   });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final userInfo = ref.watch(userInfoModelProvider(post.userId));
+    final userInfo = ref.watch(userInfoModelProvider(comment.fromUid));
     return userInfo.when(
-      data: (userPostInfo) {
-        return Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: RichTwoPartText(
-              firstPart: userPostInfo.displayName, secondPart: post.message),
+      data: (userInfo) {
+        return RichTwoPartText(
+          firstPart: userInfo.displayName,
+          secondPart: comment.comment,
         );
       },
       error: (_, __) => const SmallErrorAnimationWidget(),
-      loading: () => const Center(child: CircularProgressIndicator.adaptive()),
+      loading: () => const Center(
+        child: CircularProgressIndicator(),
+      ),
     );
   }
 }

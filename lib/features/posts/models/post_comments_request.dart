@@ -24,7 +24,6 @@ class RequestForPostAndComments {
       limit == other.limit;
 
   @override
-  // TODO: implement hashCode
   int get hashCode => Object.hashAll([
         postId,
         sortByCreatedAt,

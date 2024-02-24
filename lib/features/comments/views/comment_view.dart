@@ -6,7 +6,7 @@ import 'package:instagram_app_clone/common/components/animations/widgets/error_a
 import 'package:instagram_app_clone/common/components/animations/widgets/loading_animation_widget.dart';
 import 'package:instagram_app_clone/common/typedefs/post_id_typedef.dart';
 import 'package:instagram_app_clone/features/auth/riverpod/porviders/user_id_provider.dart';
-import 'package:instagram_app_clone/features/comments/models/post_comments_request.dart';
+import 'package:instagram_app_clone/features/posts/models/post_comments_request.dart';
 import 'package:instagram_app_clone/features/comments/providers/comment_create_provider.dart';
 import 'package:instagram_app_clone/features/comments/providers/comment_post_provider.dart';
 import 'package:instagram_app_clone/features/comments/views/widget/comment_tile.dart';

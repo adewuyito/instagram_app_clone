@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_app_clone/features/image_upload/models/file_types_enum.dart';
 import 'package:instagram_app_clone/features/posts/models/post.dart';
-import 'package:instagram_app_clone/features/posts/views/tabs/user_posts/sub_views/post_image_view.dart';
-import 'package:instagram_app_clone/features/posts/views/tabs/user_posts/sub_views/post_video_view.dart';
+import 'package:instagram_app_clone/features/posts/views/user_posts/sub_views/post_image_view.dart';
+import 'package:instagram_app_clone/features/posts/views/user_posts/sub_views/post_video_view.dart';
 
 class PostImageOrVideoView extends StatelessWidget {
   final Post post;
