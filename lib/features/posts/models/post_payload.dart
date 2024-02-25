@@ -34,7 +34,7 @@ class PostPayload extends MapView<String, dynamic> {
             PostKey.postSettings: {
               for (final post in postSettings.entries)
                 {
-                  post.key.storageKey: postSettings,
+                  post.key.storageKey: postSettings.values,
                 },
             },
             PostKey.createdAt: FieldValue.serverTimestamp(),
